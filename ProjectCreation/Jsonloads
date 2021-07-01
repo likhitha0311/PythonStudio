@@ -1,0 +1,12 @@
+import json
+#json strings are represented using quotes
+json_string= '{"version": "3.35.5","name":"Python"}'
+json
+print(json_string)
+python_dict=json.loads(json_string)
+print(python_dict)
+
+json_object={"name":"Mona",
+             "äge":21}
+python_dict2=json.loads(json_object)
+print(python_dict2)

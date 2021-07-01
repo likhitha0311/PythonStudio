@@ -1,0 +1,168 @@
+{
+                "package_item": {
+                    "batch_id": "7a5ecfc8202de2411d2b20c22d9f19f84b08",
+                    "revision_no": 1,
+                    "default_code": "",
+                    "code": "",
+                    "notes": "Project is located in Florya Istanbul district. At this duplex apartment house, the focus was to revise the plans to more functional forms. <a href=\"https://www.lovethatdesign.com/company/sait-arslan-architects/\">Sait Arslan Architects</a>&nbsp;tried to use the natural light in a balance, formed the spaces as wide and as translucent as possible. The reflections of the swimming pool can be seen from the staircase, they demolished some walls to add some optical games.",
+                    "special_instructions": "Material to be handled carefully",
+                    "package_section_name": "",
+                    "package_section_code": "",
+                    "common_attributes": [
+                        {
+                            "name": "Shape",
+                            "type": "Text",
+                            "rank": 1,
+                            "values": [
+                                "Square",
+                                "Rectangular",
+                                "Oval",
+                                "Other",
+                                "Circular"
+                            ]
+                        },
+                        {
+                            "name": "Lamp Wattage",
+                            "type": "Text",
+                            "rank": 2,
+                            "values": []
+                        },
+                        {
+                            "name": "IP Rating",
+                            "type": "Text",
+                            "rank": 3,
+                            "values": [
+                                "IP20"
+                            ]
+                        },
+                        {
+                            "name": "Lamp Color",
+                            "type": "Text",
+                            "rank": 4,
+                            "values": [
+                                "4000K, Cool White",
+                                "3000K, Warm White"
+                            ]
+                        },
+                        {
+                            "name": "Control Gear",
+                            "type": "Text",
+                            "rank": 5,
+                            "values": [
+                                "Dimmable LED Driver",
+                                "None"
+                            ]
+                        },
+                        {
+                            "name": "Operating Voltage",
+                            "type": "Text",
+                            "rank": 6,
+                            "values": [
+                                "220-240V / 50-60Hz"
+                            ]
+                        },
+                        {
+                            "name": "Recessed Mounting",
+                            "type": "Text",
+                            "rank": 7,
+                            "values": [
+                                "Yes",
+                                "No",
+                                "Partial",
+                                "Adjustable"
+                            ]
+                        }
+                    ],
+                    "finish_notes": "",
+                    "classification": "",
+                    "green_building_rating": "",
+                    "approval_requirements": [
+                        "seaming-diagram"
+                    ],
+                    "quantity_unit": "PCS",
+                    "total_price": "2200",
+                    "discount_price": "0",
+                    "vendor": [],
+                    "package_record_map": [
+                        {
+                            "code": "",
+                            "floor": "2nd floor",
+                            "room": "Lounge",
+                            "parent": "",
+                            "no_of_units": 20
+                        }
+                    ],
+                    "product_options": [],
+                    "tags": [],
+                    "retail_price": "100",
+                    "cost_price": "100",
+                    "margin_percentage": "10",
+                    "sales_price": "110.00"
+                },
+                "product_options": [
+                    {
+                        "batch_id": "7a5ecfc8202de2411d2b20c22d9f19f84b08",
+                        "code": "",
+                        "sku": "",
+                        "name": "Light-P1",
+                        "type": "cove-light",
+                        "brand": "Ikea",
+                        "manufacturer": "",
+                        "country_of_origin": "",
+                        "product_family": "",
+                        "model_no": "",
+                        "description": "",
+                        "featured_image": {
+                            "type": "Featured",
+                            "file": {
+                                "name": "workstation1.jpg",
+                                "src": "https://images.api.spec.lovethat.design/test-designer/images/fd0b312208778045420adbb09964b4deafab.jpg",
+                                "percentage": 100
+                            },
+                            "ref_id": "fd0b312208778045420adbb09964b4deafab.jpg",
+                            "tags": [],
+                            "checked": true
+                        },
+                        "keyword": [],
+                        "style": [],
+                        "length": "undefined mm",
+                        "height": "undefined mm",
+                        "width": "undefined mm",
+                        "weight": "undefined lbs",
+                        "diameter": "undefined mm",
+                        "quantity_unit": "PCS",
+                        "unit_price": 0,
+                        "currency_code": "AED",
+                        "amount": 0,
+                        "delivery_duration_type_code": "day",
+                        "delivery_duration": "2",
+                        "images": [
+                            {
+                                "type": "Featured",
+                                "ref_id": "fd0b312208778045420adbb09964b4deafab.jpg"
+                            },
+                            {
+                                "type": "Studio",
+                                "ref_id": "f3bdf1df953a094c6d9bcee9cd0cdf2c77bb.jpg"
+                            },
+                            {
+                                "type": "Studio",
+                                "ref_id": "b2ebd9737b3f0747c8780f0799f540246843.jpg"
+                            },
+                            {
+                                "type": "Studio",
+                                "ref_id": "79507bdabb839b497cb8431b791e96ac7c7b.jpg"
+                            },
+                            {
+                                "type": "Studio",
+                                "ref_id": "fd0b312208778045420adbb09964b4deafab.jpg"
+                            }
+                        ],
+                        "documents": [],
+                        "attributes": [],
+                        "part_collection": [],
+                        "accessory_collection": [],
+                        "finishes": []
+                    }
+                ]
+            }

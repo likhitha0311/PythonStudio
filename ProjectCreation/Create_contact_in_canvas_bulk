@@ -1,0 +1,38 @@
+import csv
+import json
+import requests
+import randominfo
+import random
+
+csv_file= "/Files_/Canvascontactfile.csv"
+json_file= "/Files_/Canvasjsoncontact.json"
+url="https://canvas-dev-api.lovethat.design/api/canvas/v1.0/contact"
+oath_token='Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczpcL1wvY2FudmFzLWRldi1hcGkubG92ZXRoYXQuZGVzaWduXC9hcGlcL2NhbnZhc1wvdjEuMFwvYXV0aFwvbG9naW4iLCJpYXQiOjE2MjQxOTAyNzgsImV4cCI6MTYyNDI3NjY3OCwibmJmIjoxNjI0MTkwMjc4LCJqdGkiOiJwd2cwbTN1SVJMcDlNNFlSIiwic3ViIjpudWxsLCJwcnYiOiJlNDM2NDAyZGYzNTczYjgwOTRmMDhlMmI5YWZhYzAzMzA0YzFiZmIxIiwidXNlcl9jYWNoZV9rZXkiOiJleUpwZGlJNklrbElWVTA1ZGpaS1NYRTBSR2xuWnpsa01UbGpRMEU5UFNJc0luWmhiSFZsSWpvaWJrVjZVbU5NV1hGVFRrWkJjbTUyZVhGR2JGQXdjSGg0U0ZkWmFucERLelkwV2toc2JXMWlXU3R5WTNkM1JrdG5VVzVWYkZZdmNGbElSV2htVTA4M2NpSXNJbTFoWXlJNklqQTJOMkk0T1dGbVptSmpNamsyTkdNNFlUQmpZVE00T1daaFpqSTFNV0prTUdZNU1qSmpOemhpWkRWall6VmpZV1kwWlRVMllUUXdOVGc0WW1NeVpEVWlmUT09In0.L44qOXM6rQP5BujpYScQiOG2P6bQoPCivZGvPe3lhIc'
+headers={'Authorization':oath_token,'Content-Type': 'application/json', 'Accept': 'text/plain','username':'likhitha@28lightbulbs.com','password':'28lightbulbs'}
+
+
+count=3
+
+while count != 0:
+    print("Value of count at the beginning of loop",count)
+    sequence="17#43353dffsdnvbvcf234567anvdd"
+    email=''.join((random.choice(sequence)) for x in range(8)) +"@gmail.com"
+    firstname=randominfo.get_first_name()
+    lastname=randominfo.get_last_name()
+
+    data={"batch_id": "1234", "company_code": "","contact_tag":"","designation":"project manager","email":email,
+             "end_date": "2021-06-27 00:00:00", "first_name":firstname,"last_name":lastname,"lead_source":"advertisement","start_date":"2021-06-21 00:00:00","tel_no":"987766555"}
+    print(data)
+    payload=json.dumps(data)
+    print("******")
+    print(payload)
+    #payload=payload.replace("[","")
+    #payload=payload.replace("]","")
+    r=requests.post(url, headers=headers,data=payload)
+    print(r.status_code)
+    print(r.json())
+    count=count-1
+    print("Value of count at the end of loop",count)
+
+
+

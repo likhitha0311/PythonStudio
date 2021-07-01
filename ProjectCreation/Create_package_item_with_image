@@ -1,0 +1,196 @@
+import openpyxl
+import requests
+import json
+import random
+
+
+
+oath_token='Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczpcL1wvYXV0aC5hcGkuc3BlYy5sb3ZldGhhdC5kZXNpZ25cL2FwaVwvbG9naW4iLCJpYXQiOjE2MjQ0MzUzMDQsImV4cCI6MTYyNDYwODEwNCwibmJmIjoxNjI0NDM1MzA0LCJqdGkiOiJUZnp1UlRiNWZDUTlOemxGIiwic3ViIjoxMDcsInBydiI6ImY4MzhiOTUwOWFhZjk0YzMzODZmNjc5Zjg5MjljZGM3NjdjNzBmMmYiLCJ1c2VyX2NhY2hlX2tleSI6ImV5SnBkaUk2SW10eFNVMHdlR2hGVEdwVE5sWktTVko1VVRWM1UzYzlQU0lzSW5aaGJIVmxJam9pU2xCWVdraDNSa1F6ZVV4cVdpdFJRVmxSTkhkMVZVSlJOM1p1YUhsV00zVTRXVWhSZFcxallXRlRaelZzVFdGMmFXRjBTakJRU0RCUVRYbE5TMjl2S3lJc0ltMWhZeUk2SWpVNE9XUTNNRFV6WWpsa01qWTRPREEzTVRRMk1HRm1ObUU0TnpRNE1EWmhaRFZqTmpaaVpEWTNaak0xTXpObU1USXlaVGt4WlRKbE5ERXhPR1JrT1RRaWZRPT0iLCJjb21wYW55X2FjY291bnRfY29kZSI6ImV5SnBkaUk2SWs1Nk5EZHJRMmRrVURKclNEWXdZVE5UVEVGWlVGRTlQU0lzSW5aaGJIVmxJam9pTmxGaVpHWkhOQ3RxY1doRWJYRlBkR2xaYlN0NFYyaHpVMmhIV1hGT2FUVmFhakpvY2taeVpsWnRNRDBpTENKdFlXTWlPaUkzTldSaFkyWmxaVGRoTURJeU9URXhZell3T0RVeE4yTmtPR1poT1Roa01UVmxabVpsTVdabU9EbG1ZelU0TmpZNVltSmhaVEJqTmpJelltTmhaV0ZrSW4wPSJ9.630UFaNkOqedkboVAKYXGpPDtCM5FV5kU8LS8t4hErI'
+headers = {'Authorization': oath_token, 'Content-Type': 'application/json', 'Accept': 'text/plain'}
+sequence="1743353dffsdnvbvcf234567anvdd"
+image_file="C:\\Users\\karti\\PycharmProjects\\PythonStudio\\pom_mark-of-time_03.jpg"
+files = {'image': open(image_file, 'rb')}
+
+package_item_code ="Code" +''.join((random.choice(sequence)) for x in range(4))
+package_item_name = "Name" + ''.join((random.choice(sequence)) for x in range(4))
+package_name="jiii"
+package_item_payload = {
+    "package_item": {
+        "batch_id": "7a5ecfc8202de2411d2b20c22d9f19f84b08",
+        "package_code": "jiii",
+        "revision_no": 1,
+        "name": package_item_name,
+        "product_record_code": package_item_code,
+        "default_code": "",
+        "code": "",
+        "notes": "Project is located in Florya Istanbul district. At this duplex apartment house, the focus was to revise the plans to more functional forms. <a href=\"https://www.lovethatdesign.com/company/sait-arslan-architects/\">Sait Arslan Architects</a>&nbsp;tried to use the natural light in a balance, formed the spaces as wide and as translucent as possible. The reflections of the swimming pool can be seen from the staircase, they demolished some walls to add some optical games.",
+        "special_instructions": "Material to be handled carefully",
+        "package_section_name": "",
+        "package_section_code": "",
+        "common_attributes": [
+            {
+                "name": "Shape",
+                "type": "Text",
+                "rank": 1,
+                "values": [
+                    "Square",
+                    "Rectangular",
+                    "Oval",
+                    "Other",
+                    "Circular"
+                ]
+            },
+            {
+                "name": "Lamp Wattage",
+                "type": "Text",
+                "rank": 2,
+                "values": []
+            },
+            {
+                "name": "IP Rating",
+                "type": "Text",
+                "rank": 3,
+                "values": [
+                    "IP20"
+                ]
+            },
+            {
+                "name": "Lamp Color",
+                "type": "Text",
+                "rank": 4,
+                "values": [
+                    "4000K, Cool White",
+                    "3000K, Warm White"
+                ]
+            },
+            {
+                "name": "Control Gear",
+                "type": "Text",
+                "rank": 5,
+                "values": [
+                    "Dimmable LED Driver",
+                    "None"
+                ]
+            },
+            {
+                "name": "Operating Voltage",
+                "type": "Text",
+                "rank": 6,
+                "values": [
+                    "220-240V / 50-60Hz"
+                ]
+            },
+            {
+                "name": "Recessed Mounting",
+                "type": "Text",
+                "rank": 7,
+                "values": [
+                    "Yes",
+                    "No",
+                    "Partial",
+                    "Adjustable"
+                ]
+            }
+        ],
+        "finish_notes": "",
+        "classification": "",
+        "green_building_rating": "",
+        "approval_requirements": [
+            "seaming-diagram"
+        ],
+        "quantity_unit": "PCS",
+        "total_price": "2200",
+        "discount_price": "0",
+        "vendor": [],
+        "package_record_map": [
+            {
+                "code": "",
+                "floor": "2nd floor",
+                "room": "Lounge",
+                "parent": "",
+                "no_of_units": 20
+            }
+        ],
+        "product_options": [],
+        "tags": [],
+        "retail_price": "100",
+        "cost_price": "100",
+        "margin_percentage": "10",
+        "sales_price": "110.00"
+    },
+    "product_options": [
+        {
+            "batch_id": "7a5ecfc8202de2411d2b20c22d9f19f84b08",
+            "code": "",
+            "sku": "",
+            "name": "Light-P1",
+            "type": "cove-light",
+            "brand": "Ikea",
+            "manufacturer": "",
+            "country_of_origin": "",
+            "product_family": "",
+            "model_no": "",
+            "description": "",
+            "featured_image": {
+                "type": "Featured",
+                "file": {
+                    "name": "workstation1.jpg",
+                    "src": "https://images.api.spec.lovethat.design/test-designer/images/fd0b312208778045420adbb09964b4deafab.jpg",
+                    "percentage": 100
+                },
+                "ref_id": "fd0b312208778045420adbb09964b4deafab.jpg",
+                "tags": [],
+                "checked": True
+            },
+            "keyword": [],
+            "style": [],
+            "length": "undefined mm",
+            "height": "undefined mm",
+            "width": "undefined mm",
+            "weight": "undefined lbs",
+            "diameter": "undefined mm",
+            "quantity_unit": "PCS",
+            "unit_price": 0,
+            "currency_code": "AED",
+            "amount": 0,
+            "delivery_duration_type_code": "day",
+            "delivery_duration": "2",
+            "images":  [
+                {
+                    "type": "Featured",
+                    "ref_id": "fd0b312208778045420adbb09964b4deafab.jpg"
+                },
+                {
+                    "type": "Studio",
+                    "ref_id": "f3bdf1df953a094c6d9bcee9cd0cdf2c77bb.jpg"
+                },
+                {
+                    "type": "Studio",
+                    "ref_id": "b2ebd9737b3f0747c8780f0799f540246843.jpg"
+                },
+                {
+                    "type": "Studio",
+                    "ref_id": "79507bdabb839b497cb8431b791e96ac7c7b.jpg"
+                },
+                {
+                    "type": "Studio",
+                    "ref_id": "fd0b312208778045420adbb09964b4deafab.jpg"
+                }
+            ],
+            "documents": [],
+            "attributes": [],
+            "part_collection": [],
+            "accessory_collection": [],
+            "finishes": []
+
+        }
+    ]
+}
+package_item_data = json.dumps(package_item_payload)
+print("Package item data is ",package_item_data)
+package_url="https://designer.api.spec.lovethat.design/api/designer/v1.0/projects/packages/"+package_name+"/package-items?force=false&view=sections"
+print(package_url)
+package_item_response = requests.post(url=package_url,
+                                 headers=headers, data=package_item_data)
+print("Status code of package item creation is ", package_item_response.status_code)
+print("Response body of package item is ", package_item_response.json())

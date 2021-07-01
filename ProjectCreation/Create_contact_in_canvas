@@ -1,0 +1,39 @@
+import csv
+import json
+import requests
+
+csv_file= "/Files_/Canvascontactfile.csv"
+json_file= "/Files_/Canvasjsoncontact.json"
+url="https://canvas-dev-api.lovethat.design/api/canvas/v1.0/contact"
+oath_token='Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczpcL1wvY2FudmFzLWRldi1hcGkubG92ZXRoYXQuZGVzaWduXC9hcGlcL2NhbnZhc1wvdjEuMFwvYXV0aFwvbG9naW4iLCJpYXQiOjE2MjQwOTM5OTcsImV4cCI6MTYyNDE4MDM5NywibmJmIjoxNjI0MDkzOTk3LCJqdGkiOiJBem0xTm9pRXNvdTIxV3J1Iiwic3ViIjpudWxsLCJwcnYiOiJlNDM2NDAyZGYzNTczYjgwOTRmMDhlMmI5YWZhYzAzMzA0YzFiZmIxIiwidXNlcl9jYWNoZV9rZXkiOiJleUpwZGlJNklqaHZhRXhhZFVkU2VsRnRVV3B1VlhOUVJFUnhWbmM5UFNJc0luWmhiSFZsSWpvaWFXbzRlVXRoVkhsd1JIZ3hUa05zYVV4Ukx6Vm5TVzU1VURsQ1RpdG1kVWRQTlVGek1FOUtXbUpUWjJKQmFFSnlkbTVCZWtGVFFYTllPR05xYVZsalJDSXNJbTFoWXlJNklqRXlOR001TlRKaU1EazROV0V3TURGak5EWXhObUZrWTJOak56RTVNR0ZqTW1VeFltVmxaRFUzWVRWaE5qQm1ZV1l4WmpZMU5qaGlNelEwT0dNME16Y2lmUT09In0.X-NuoSRA65SR9gsGjSpfpaNllmVYbub_s0xJleXNsnk'
+headers={'Authorization':oath_token,'Content-Type': 'application/json', 'Accept': 'text/plain','username':'likhitha@28lightbulbs.com','password':'28lightbulbs'}
+
+with open(csv_file, 'r') as f:
+    read_file = csv.reader(f)
+    next(read_file)
+    data = []
+    for row in read_file:
+        # print(row)
+        data.append({"batch_id": row[0], "company_code": row[1],"contact_tag":row[2],"designation":row[3],"email":row[5],
+                     "end_date": row[4], "first_name":row[6],"last_name":row[7],"lead_source":row[8],"start_date":row[9],"tel_no":row[10]})
+
+
+with open(json_file, 'w') as f:
+    json.dump(data, f, indent=4)
+
+f1=open(json_file, 'r')
+jsondata=json.load(f1)
+print(jsondata)
+payload=json.dumps(jsondata)
+print(payload)
+
+
+for i in jsondata:
+    print(i)
+    payload=json.dumps(i)
+    r=requests.post(url, headers=headers,data=payload)
+    print(r.status_code)
+    print(r.json())
+
+
+

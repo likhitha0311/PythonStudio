@@ -1,0 +1,19 @@
+import requests
+import json
+import random
+
+file_path= "C:\\Users\\karti\\PycharmProjects\\PythonStudio\\Files_\\Sendjsonbody.json"
+oath_token='Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczpcL1wvYXV0aC5hcGkuc3BlYy5sb3ZldGhhdC5kZXNpZ25cL2FwaVwvbG9naW4iLCJpYXQiOjE2MjQ0MzUzMDQsImV4cCI6MTYyNDYwODEwNCwibmJmIjoxNjI0NDM1MzA0LCJqdGkiOiJUZnp1UlRiNWZDUTlOemxGIiwic3ViIjoxMDcsInBydiI6ImY4MzhiOTUwOWFhZjk0YzMzODZmNjc5Zjg5MjljZGM3NjdjNzBmMmYiLCJ1c2VyX2NhY2hlX2tleSI6ImV5SnBkaUk2SW10eFNVMHdlR2hGVEdwVE5sWktTVko1VVRWM1UzYzlQU0lzSW5aaGJIVmxJam9pU2xCWVdraDNSa1F6ZVV4cVdpdFJRVmxSTkhkMVZVSlJOM1p1YUhsV00zVTRXVWhSZFcxallXRlRaelZzVFdGMmFXRjBTakJRU0RCUVRYbE5TMjl2S3lJc0ltMWhZeUk2SWpVNE9XUTNNRFV6WWpsa01qWTRPREEzTVRRMk1HRm1ObUU0TnpRNE1EWmhaRFZqTmpaaVpEWTNaak0xTXpObU1USXlaVGt4WlRKbE5ERXhPR1JrT1RRaWZRPT0iLCJjb21wYW55X2FjY291bnRfY29kZSI6ImV5SnBkaUk2SWs1Nk5EZHJRMmRrVURKclNEWXdZVE5UVEVGWlVGRTlQU0lzSW5aaGJIVmxJam9pTmxGaVpHWkhOQ3RxY1doRWJYRlBkR2xaYlN0NFYyaHpVMmhIV1hGT2FUVmFhakpvY2taeVpsWnRNRDBpTENKdFlXTWlPaUkzTldSaFkyWmxaVGRoTURJeU9URXhZell3T0RVeE4yTmtPR1poT1Roa01UVmxabVpsTVdabU9EbG1ZelU0TmpZNVltSmhaVEJqTmpJelltTmhaV0ZrSW4wPSJ9.630UFaNkOqedkboVAKYXGpPDtCM5FV5kU8LS8t4hErI'
+headers={'Authorization': oath_token, 'Content-Type': 'application/json', 'Accept': 'text/plain'}
+url="https://designer.api.spec.lovethat.design/api/designer/v1.0/projects/"
+sequence="1743353dffsdnvbvcf234567anvdd"
+project_name = "Python-Automation-" + ''.join((random.choice(sequence)) for x in range(5))
+
+
+datafile=open(file_path,'r')
+filecontent=json.load(datafile)
+filecontent['name']=project_name
+print(filecontent)
+payload=json.dumps(filecontent)
+response=requests.request("POST",url=url,headers=headers,data=payload)
+print(response.status_code)

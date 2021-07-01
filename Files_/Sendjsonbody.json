@@ -1,0 +1,31 @@
+{
+       "batch_id": "66a94bebdde56d4dadda569dcc9d28fd96d3",
+       "company_name": "",
+       "company_code": "28-lightbulbs",
+       "reference_no": "",
+       "external_url": "",
+       "description": "",
+       "address": "607 Uniestate millennium tower, Dubai silicon oasis\n607",
+       "city_name": "Dubai Silicon Oasis",
+       "state": "Dubai",
+       "zip_code": "99009900",
+       "country_code": "AF",
+       "start_date": "20-06-2021" ,
+       "end_date": "",
+       "estimated_duration": 0,
+       "estimated_value": "",
+       "exchange_rate": "",
+       "estimated_value_currency_code": "GBP",
+       "responsible_code": "ER527",
+       "custom_data": [
+           {
+               "code": "project-vat",
+               "type": "currency"
+           }
+       ],
+       "groups": "",
+       "project_types": [
+           "construction-1"
+       ],
+       "tags": []
+   }

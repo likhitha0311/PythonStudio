@@ -1,0 +1,28 @@
+[
+    {
+        "batch_id": "3432454",
+        "company_code": "",
+        "contact_tag": "",
+        "designation": "system db engineer",
+        "email": "krit11i@mail.com",
+        "end_date": "2021-06-27 00:00:00",
+        "first_name": "Preecysha",
+        "last_name": "Pandey",
+        "lead_source": "facebook",
+        "start_date": "2021-06-21 00:00:00",
+        "tel_no": "1234567"
+    },
+    {
+        "batch_id": "786665",
+        "company_code": "",
+        "contact_tag": "",
+        "designation": "tester api",
+        "email": "anishad111utt@gmail.com",
+        "end_date": "2021-06-23 00:00:00",
+        "first_name": "Anisha",
+        "last_name": "Mrunal",
+        "lead_source": "insta",
+        "start_date": "2021-06-18 00:00:00",
+        "tel_no": "998878877"
+    }
+]
